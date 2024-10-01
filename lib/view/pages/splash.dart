@@ -1,10 +1,21 @@
+import 'package:chatapp/view/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatelessWidget {
   const Splash({super.key});
 
+
   @override
   Widget build(BuildContext context) {
+
+    Future.delayed(Duration(seconds: 3), () {
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => LoginPage()),
+      );
+    });
+
     return Scaffold(
       body: Container(
         child: Column(
@@ -19,9 +30,9 @@ class Splash extends StatelessWidget {
               'The best chat app of this contury',
               style: TextStyle(fontSize: 16),
             ),
-            SizedBox(height: 50,),
+           SizedBox(height: 200,),
             Container(
-              margin: EdgeInsets.all(15),
+              margin: EdgeInsets.all( 15),
               width: double.infinity,
               child: ElevatedButton(
                 style: ButtonStyle(
