@@ -1,4 +1,5 @@
 
+import 'package:chatapp/features/view/pages/login.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatelessWidget {
@@ -8,6 +9,13 @@ class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    Future.delayed(Duration(seconds: 3), () {
+
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => LoginPage()),
+      );
+    });
 
     return Scaffold(
       body:   Center(
