@@ -1,5 +1,4 @@
-
-import 'package:chatapp/features/view/pages/login.dart';
+import 'package:chatapp/features/view/pages/auth/login_page.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatelessWidget {
@@ -13,7 +12,7 @@ class Splash extends StatelessWidget {
 
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => LoginPage()),
+        MaterialPageRoute(builder: (context) => Login()),
       );
     });
 
