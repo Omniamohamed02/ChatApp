@@ -8,13 +8,15 @@ class ChatListile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   ListTile(
+    return ListTile(
       leading: CircleAvatar(
         radius: 30,
         backgroundImage: AssetImage('assets/images/profile.png'),
       ),
-      title: Text('Ahmed',
-          style: TextStyle(fontWeight: FontWeight.bold)),
+      title: Text(
+        'Ahmed',
+        style: TextStyle(fontWeight: FontWeight.bold),
+      ),
       subtitle: Row(
         children: [
           Icon(Icons.done_all, color: Colors.grey, size: 20),
@@ -32,26 +34,24 @@ class ChatListile extends StatelessWidget {
         children: [
           Text('07:00 PM'),
           SizedBox(height: 5),
-          Expanded(
-            child: CircleAvatar(
-              radius: 12,
-              backgroundColor: ColorApp.primaryColor,
-              child: Center(
-                child: Text(
-                  '5',
-                  maxLines: 1,
-                  style: TextStyle(color: Colors.white, fontSize: 12),
-                ),
+          CircleAvatar(
+            radius: 12,
+            backgroundColor: ColorApp.primaryColor,
+            child: Center(
+              child: Text(
+                '5',
+                maxLines: 1,
+                style: TextStyle(color: Colors.white, fontSize: 12),
               ),
             ),
           )
         ],
       ),
-    onTap: () {
-      Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => const ChatPage(),
-      ));
-
-    });
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const ChatPage(),
+        ));
+      },
+    );
   }
 }

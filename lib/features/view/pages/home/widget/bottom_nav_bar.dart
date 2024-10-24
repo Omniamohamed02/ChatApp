@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/themes/colors.dart';
 import '../calls_page.dart';
 import '../chats_page.dart';
-import '../status_page.dart';
+import '../../status/status_page.dart';
 import 'appbar.dart';
 
 class BottomNavBar extends StatefulWidget {

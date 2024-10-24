@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:chatapp/features/view/pages/home/new_group_page.dart';
-import '../profile_page.dart';
+import '../../profile/profile_page.dart';
 
 class Appbar extends StatelessWidget implements PreferredSizeWidget {
   const Appbar({super.key});
