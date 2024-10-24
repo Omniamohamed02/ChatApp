@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
-
 import '../../../../core/themes/colors.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
+
+  @override
+  _ProfilePageState createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  final TextEditingController _nameController = TextEditingController(text: 'Omnia Mohamed');
+  final TextEditingController _phoneController = TextEditingController(text: '+201234567891');
+
+  @override
+  void dispose() {
+    _nameController.dispose();
+    _phoneController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +36,7 @@ class ProfilePage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          const Divider(
-            color: Colors.grey,
-          ),
+          const Divider(color: Colors.grey),
           const SizedBox(height: 20),
           Stack(children: [
             const CircleAvatar(
@@ -56,9 +68,7 @@ class ProfilePage extends StatelessWidget {
             ),
           ]),
           const SizedBox(height: 20),
-          const Divider(
-            color: Colors.grey,
-          ),
+          const Divider(color: Colors.grey),
           const SizedBox(height: 20),
           ListTile(
             title: Text(
@@ -75,8 +85,8 @@ class ProfilePage extends StatelessWidget {
                 shadowColor: Colors.grey.withOpacity(0.7),
                 borderRadius: BorderRadius.circular(30),
                 child: TextField(
+                  controller: _nameController,
                   decoration: InputDecoration(
-                    hintText: 'Omnia Mohamed',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30)),
                   ),
@@ -100,8 +110,8 @@ class ProfilePage extends StatelessWidget {
                 shadowColor: Colors.grey.withOpacity(0.7),
                 borderRadius: BorderRadius.circular(30),
                 child: TextField(
+                  controller: _phoneController,
                   decoration: InputDecoration(
-                    hintText: '+201234567891',
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30)),
                   ),
