@@ -8,7 +8,9 @@ class ChatListile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
+    return Card(
+    elevation: 1,
+      child: ListTile(
       leading: CircleAvatar(
         radius: 30,
         backgroundImage: AssetImage('assets/images/profileg.png'),
@@ -52,6 +54,6 @@ class ChatListile extends StatelessWidget {
           builder: (context) => const ChatPage(),
         ));
       },
-    );
+    ));
   }
 }
