@@ -3,6 +3,7 @@ import 'package:chatapp/features/view/pages/home/new_group_page.dart';
 import '../../profile/profile_page.dart';
 
 class Appbar extends StatelessWidget implements PreferredSizeWidget {
+
   const Appbar({super.key});
 
   @override
@@ -43,28 +44,50 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget {
                     builder: (context) => const NewGroupPage(),
                   ));
                 },
-                child: const Text('New Group',
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                child: Row(
+                  children: [
+                    Icon(Icons.add),
+                    const Text('New Group',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ],
+                ),
               ),
               PopupMenuItem<String>(
                 value: 'Profile',
-                child: const Text('Profile',
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                child: Row(
+                  children: [
+                    Icon(Icons.account_circle_sharp),
+                    const Text('Profile',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  ],
+                ),
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const ProfilePage(),
                   ));
                 },
               ),
-              const PopupMenuItem<String>(
-                value: ' Logout',
-                child: Text('Logout',
-                    style: TextStyle(fontWeight: FontWeight.bold) ),
-              ),
+
               const PopupMenuItem<String>(
                 value: ' Settings',
-                child: Text('Settings',
-                    style: TextStyle(fontWeight: FontWeight.bold) ),
+                child: Row(
+                  children: [
+                    Icon(Icons.settings),
+                    Text('Settings',
+                        style: TextStyle(fontWeight: FontWeight.bold) ),
+                  ],
+                ),
+              ),
+              const PopupMenuItem<String>(
+                value: ' Logout',
+                child:
+                Row(
+                  children: [
+                    Icon(Icons.logout),
+                    Text('Logout',
+                        style: TextStyle(fontWeight: FontWeight.bold) ),
+                  ],
+                ),
               ),
             ];
           },
