@@ -11,7 +11,7 @@ class ChatListile extends StatelessWidget {
     return ListTile(
       leading: CircleAvatar(
         radius: 30,
-        backgroundImage: AssetImage('assets/images/profile.png'),
+        backgroundImage: AssetImage('assets/images/profileg.png'),
       ),
       title: Text(
         'Ahmed',
