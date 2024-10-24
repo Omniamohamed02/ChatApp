@@ -12,7 +12,7 @@ class Splash extends StatelessWidget {
 
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Login()),
+        MaterialPageRoute(builder: (context) => LoginPage()),
       );
     });
 
@@ -23,7 +23,7 @@ class Splash extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset('lib/core/constant/assets/images/logo.png',height: 200,width: 200,),
+              Image.asset('assets/images/logo.png',height: 200,width: 200,),
               const SizedBox(height: 30),
               const Text(
                 "what's App",

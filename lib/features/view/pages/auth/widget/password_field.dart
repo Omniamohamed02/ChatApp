@@ -16,21 +16,22 @@ class PasswordField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return defaultText(
-      type: TextInputType.visiblePassword,
-      controller: passwordController,
-      label: 'enter your password',
-      hint: 'Password',
-      prefix: Icons.lock,
-      suffix: isPasswordVisible ? Icons.visibility : Icons.visibility_off,
-      isObscure: !isPasswordVisible,
-      pressed: toggleVisibility,
-      validate: (value) {
-        if (value!.isEmpty) {
-          return 'password is too short';
-        }
-        return null;
-      },
+    return  defaultText(
+        type: TextInputType.visiblePassword,
+        controller: passwordController,
+        label: 'enter your password',
+        hint: 'Password',
+        prefix: Icons.lock,
+        suffix: isPasswordVisible ? Icons.visibility : Icons.visibility_off,
+        isObscure: !isPasswordVisible,
+        pressed: toggleVisibility,
+        validate: (value) {
+          if (value!.isEmpty) {
+            return 'password is too short';
+          }
+          return null;
+        },
     );
+
   }
 }

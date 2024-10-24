@@ -9,7 +9,7 @@ class EmailField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return defaultText(
+    return    defaultText(
       type: TextInputType.emailAddress,
       controller: emailController,
       label: 'enter your email',
