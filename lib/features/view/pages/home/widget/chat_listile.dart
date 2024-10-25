@@ -1,4 +1,4 @@
-import 'package:chatapp/features/view/pages/home/chat_page.dart';
+import 'package:chatapp/features/view/pages/chat/chat_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/themes/colors.dart';
