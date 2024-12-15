@@ -1,3 +1,4 @@
+/*
 import 'package:chatapp/features/view/pages/home/widget/chat_listile.dart';
 import 'package:chatapp/features/view/pages/home/widget/massagebutton.dart';
 import 'package:flutter/material.dart';
@@ -23,4 +24,4 @@ class ChatsPage extends StatelessWidget {
       ),
     ]);
   }
-}
+}*/

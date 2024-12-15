@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/themes/colors.dart';
+import '../../chat/widget/chat.dart';
 import '../calls_page.dart';
 import '../chats_page.dart';
 import '../../status/status_page.dart';
@@ -18,7 +19,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int currentIndex = 0;
 
   final List<Widget> pages = [
-    const ChatsPage(),
+    const Chat(),
     const StatusPage(),
     const CallsPage(),
   ];

@@ -58,7 +58,7 @@ class InputText extends StatelessWidget {
             borderRadius: BorderRadius.circular(50),
             color: ColorApp.primaryColor,
           ),
-          child: Icon(Icons.mic, color: Colors.grey),
+          child: Icon(Icons.mic, color: Colors.white),
         ),
       ],
     );

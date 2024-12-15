@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:chatapp/features/view/pages/home/new_group_page.dart';
+import '../../group/widget/arrow.dart';
+import '../../group/widget/new_group.dart';
 import '../../profile/profile_page.dart';
 
 class Appbar extends StatelessWidget implements PreferredSizeWidget {
@@ -41,7 +42,7 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget {
                 value: 'New Group',
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const NewGroupPage(),
+                    builder: (context) => const NewGroup(),
                   ));
                 },
                 child: Row(
